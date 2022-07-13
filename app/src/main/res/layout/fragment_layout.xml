@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.sbsj.mytube.customlayout.CustomMotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/playerMotionLayout"
     app:layoutDescription="@xml/fragment_layout_scene">
 
@@ -10,22 +11,22 @@
         android:id="@+id/mainContainerLayout"
         android:layout_width="0dp"
         android:layout_height="250dp"
-        android:background="#FF0404"
+        android:background="#989898"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:background="#00ff00"
-        android:id="@+id/playerView"
+    <com.google.android.exoplayer2.ui.PlayerView
+        app:resize_mode="fill"
         android:layout_width="0dp"
+        android:id="@+id/playerView"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@id/mainContainerLayout"
         app:layout_constraintStart_toStartOf="@id/mainContainerLayout"
         app:layout_constraintTop_toTopOf="@id/mainContainerLayout" />
 
     <ImageView
-
+        tools:src="@drawable/ic_baseline_play_arrow_24"
         android:id="@+id/bottomPlayerControlButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,6 +36,8 @@
         app:layout_constraintTop_toTopOf="@id/mainContainerLayout" />
 
     <TextView
+        android:textColor="@color/black"
+        tools:text="텍스트"
         android:id="@+id/bottomTitleTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -53,9 +56,12 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#ffffff"
+        android:nestedScrollingEnabled="false"
+        android:padding="16dp"
+        android:clipToPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/playerView"
         app:layout_constraintTop_toBottomOf="@id/mainContainerLayout" />
 
-</androidx.constraintlayout.motion.widget.MotionLayout>
+</com.sbsj.mytube.customlayout.CustomMotionLayout>

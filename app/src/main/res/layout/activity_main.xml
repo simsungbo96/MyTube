@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/mainMotionLayout"
-    android:background="#554E4E"
+    android:background="#00FFFFFF"
     app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
